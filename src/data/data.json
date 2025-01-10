@@ -1,0 +1,92 @@
+{
+  "skills": [
+    {
+      "name": "Programmation",
+      "icon": "Code2",
+      "technologies": [
+        { "name": "Python", "level": 85 },
+        { "name": "JavaScript", "level": 80 },
+        { "name": "C", "level": 75 },
+        { "name": "Java", "level": 75 },
+        { "name": "C#", "level": 65 },
+        { "name": "TypeScript", "level": 60 }
+      ]
+    },
+    {
+      "name": "Mathématiques",
+      "icon": "Book",
+      "technologies": [
+        { "name": "Mathématiques appliquées", "level": 75 },
+        { "name": "Algorithmique", "level": 75 }
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "icon": "Book",
+      "technologies": [
+        { "name": "React", "level": 30 },
+        { "name": "Svelte", "level": 60 },
+        { "name": "Tailwind Css", "level": 60 }
+      ]
+    },
+    {
+      "name": "Développement",
+      "icon": "Database",
+      "technologies": [
+        { "name": "POO", "level": 85 },
+        { "name": "Structures de données", "level": 70 }
+      ]
+    },
+    {
+      "name": "Outils",
+      "icon": "Puzzle",
+      "technologies": [
+        { "name": "Git", "level": 70 },
+        { "name": "Godot", "level": 60 },
+        { "name": "Blender", "level": 40 }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Escape Game",
+      "description": "Un jeu d'aventure textuel interactif en Java, développé en équipe. Implémentation d'un système de progression et d'énigmes complexe.",
+      "technologies": ["Java", "POO", "Git"],
+      "githubLink": "https://github.com/ManantsoaRayan/Escape_game_Java_Project",
+      "demoLink": null,
+      "image": "/images/escape_game2.png",
+      "duration": "1 mois",
+      "teamSize": 4,
+      "achievements": [
+        "Système de minuterie",
+        "Interface utilisateur intuitive",
+        "Structuration de projet"
+      ]
+    },
+    {
+      "title": "Automate Cellulaire",
+      "description": "Simulation d'automate cellulaire avec implémentation des règles de vie et de mort des cellules. Visualisation graphique de l'évolution du système.",
+      "technologies": ["Python", "Simulation", "Algorithmique"],
+      "image": "/images/Art_Cellular_Automata.png",
+      "duration": "2 mois",
+      "teamSize": 3,
+      "achievements": [
+        "Visualisation en temps réel",
+        "Patterns complexes générés",
+        "Interface paramétrable"
+      ]
+    },
+    {
+      "title": "Chess Game",
+      "description": "Jeu d'échecs complet développé en première année avec interface graphique interactive utilisant Pygame.",
+      "technologies": ["Python", "Pygame", "POO"],
+      "image": "/images/chess.png",
+      "duration": "1.5 mois",
+      "teamSize": 4,
+      "achievements": [
+        "Système d'aide pour les cases",
+        "Interface et quelques regles"
+      ]
+    }
+  ]
+}
