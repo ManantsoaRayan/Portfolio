@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import ProjectCard from "./ProjectCard";
+const Projects = ({ projects }) => {
+    return (_jsxs("section", { className: "relative py-20 h-screen w-full bg-gray-800", children: [_jsx("div", { className: "absolute inset-0 overflow-hidden", children: _jsx("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(255,_138,_76,_0.1)_0%,_rgba(0,_0,_0,_0)_70%)]" }) }), _jsxs("div", { className: "relative max-w-6xl mx-auto px-4", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx("h2", { className: "text-5xl font-bold text-orange-500 mb-4", children: "Projets" }), _jsx("p", { className: "text-gray-400 max-w-2xl mx-auto text-2xl", children: "Une s\u00E9lection de mes projets les plus significatifs, d\u00E9montrant mes comp\u00E9tences en d\u00E9veloppement de jeux et en programmation." })] }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8", children: projects.map((project, index) => (_jsx("div", { className: "opacity-0 animate-fade-in", style: { animationDelay: `${index * 200}ms` }, children: _jsx(ProjectCard, { project: project }) }, index))) })] })] }));
+};
+export default Projects;
