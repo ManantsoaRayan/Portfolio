@@ -18,7 +18,7 @@ const ThemeContext = createContext<ThemeCtx>({ theme: "dark", toggleTheme: () =>
 interface LangCtx {
   lang: Lang
   toggleLang: () => void
-  t: typeof translations["en"]
+  t: typeof translations[Lang]
 }
 
 const LangContext = createContext<LangCtx>({
