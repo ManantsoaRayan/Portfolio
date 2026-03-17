@@ -12,7 +12,7 @@ export default function Hero() {
 
   const typewriterLines = [
     lang === "en" ? `> Hello, World.` : `> Bonjour, Monde.`,
-    `> Je suis ${config.name}.`,
+    lang === "en" ? `> I am ${config.name}.` : `> Je suis ${config.name}.`,
     `> ${config.title}.`,
     `> ${config.tagline}`,
   ]
