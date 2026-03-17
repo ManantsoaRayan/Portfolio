@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0a0a0f;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #0a0a0f;
+  color: #e8e8f0;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--fallback-b1, oklch(var(--b1))); }
+::-webkit-scrollbar-thumb { background: #e8613a; border-radius: 2px; }
+
+/* Light mode overrides */
+html.light-mode body { background-color: #f8f5f0; }
+html.light-mode .grid-bg {
+  background-image:
+    linear-gradient(rgba(232, 97, 58, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 97, 58, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+html.light-mode .glow-box {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08), 0 0 30px rgba(232, 97, 58, 0.06);
+}
+html.light-mode .glow-box:hover {
+  box-shadow: 0 4px 30px rgba(0,0,0,0.12), 0 0 40px rgba(232, 97, 58, 0.12);
+}
+
+/* Grid overlay */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(232, 97, 58, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 97, 58, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Noise texture */
+.noise::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px;
+  z-index: 9999;
+}
+
+/* Terminal cursor */
+.cursor::after {
+  content: '_';
+  animation: blink 1.2s step-end infinite;
+  color: #e8613a;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Scan line effect */
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+.scanline::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(232,97,58,0.4), transparent);
+  animation: scan 4s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { top: -2px; }
+  100% { top: 100%; }
+}
+
+/* Glow effects */
+.glow {
+  text-shadow: 0 0 20px rgba(232, 97, 58, 0.5);
+}
+.glow-box {
+  box-shadow: 0 0 30px rgba(232, 97, 58, 0.15), 0 0 60px rgba(232, 97, 58, 0.05);
+}
+.glow-box:hover {
+  box-shadow: 0 0 40px rgba(232, 97, 58, 0.25), 0 0 80px rgba(232, 97, 58, 0.1);
+}
+
+/* Section reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #e8613a 0%, #f5c842 60%, #4a9eff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Data viz decorative line */
+.data-line {
+  background: repeating-linear-gradient(
+    90deg,
+    #e8613a 0, #e8613a 3px,
+    transparent 3px, transparent 12px
+  );
+}
+
+/* Horizontal rule with data aesthetic */
+.hr-data {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e8613a 30%, #4a9eff 70%, transparent);
+}

@@ -1,0 +1,163 @@
+export type Lang = "en" | "fr"
+
+export const translations = {
+  en: {
+    nav: {
+      about: "About",
+      projects: "Projects",
+      skills: "Skills",
+      contact: "Contact",
+      resume: "Resume",
+    },
+    hero: {
+      available: "// Available for opportunities",
+      viewProjects: "View Projects →",
+      contactMe: "Contact Me",
+      resume: "↓ Resume",
+    },
+    about: {
+      sectionLabel: "01 /",
+      sectionTitle: "About Me",
+      openToWork: "✓ Open to work",
+      whatIBring: "// What I bring to the table",
+      bullets: [
+        "Deep statistical reasoning & experimental design",
+        "End-to-end ML pipelines from ingestion to deployment",
+        "Communicating insights clearly to non-technical stakeholders",
+        "Engineering-grade code quality with reproducibility in mind",
+      ],
+    },
+    projects: {
+      sectionLabel: "02 /",
+      sectionTitle: "Projects",
+      loadedFrom: "// Loaded live from",
+      taggedWith: '— repos tagged',
+      tagKeyword: "DATASCIENCE",
+      inDescription: "in description",
+      viewAll: "View all repositories on GitHub →",
+      emptyConfig: 'Set NEXT_PUBLIC_GITHUB_USERNAME in your environment or update src/lib/config.ts',
+      emptyNone: (username: string) => `No repos with "DATASCIENCE" in description found for @${username}`,
+      emptyHint: 'Add "DATASCIENCE" anywhere in a repo description to feature it here.',
+      github: "GitHub",
+      liveDemo: "Live Demo",
+    },
+    skills: {
+      sectionLabel: "03 /",
+      sectionTitle: "Skills",
+      atAGlance: "// Tech stack at a glance",
+      table: [
+        ["Primary Language", "Python 🐍"],
+        ["Notebooks", "Jupyter / Colab"],
+        ["Version Control", "Git / GitHub"],
+        ["Deployment", "Streamlit / Docker"],
+        ["Orchestration", "Airflow / Prefect"],
+        ["Model Serving", "FastAPI / BentoML"],
+        ["Experiment Tracking", "MLflow / W&B"],
+        ["Viz Library", "Plotly / Altair"],
+      ],
+    },
+    contact: {
+      sectionLabel: "04 /",
+      sectionTitle: "Contact",
+      heading1: "Let's build",
+      heading2: "something with data.",
+      subtext:
+        "Whether you have a project in mind, a data challenge to solve, or just want to chat about machine learning and pipelines — my inbox is open.",
+      bullets: [
+        { icon: "💼", text: "Open to full-time, contract, freelance roles" },
+        { icon: "🤝", text: "Happy to collaborate on open-source projects" },
+        { icon: "🎤", text: "Available for talks and mentorship" },
+      ],
+      sendMessage: "// Send a message",
+      sendEmail: "✉ Send Email",
+      orFindMe: "or find me on",
+      copied: "Copied!",
+    },
+    footer: {
+      builtWith: "Built with Next.js · Tailwind · DaisyUI",
+      rights: "All rights reserved.",
+    },
+    statsLabels: ["Datasets analysed", "Models deployed", "Years experience"],
+  },
+
+  fr: {
+    nav: {
+      about: "À propos",
+      projects: "Projets",
+      skills: "Compétences",
+      contact: "Contact",
+      resume: "CV",
+    },
+    hero: {
+      available: "// Disponible pour des opportunités",
+      viewProjects: "Voir les projets →",
+      contactMe: "Me contacter",
+      resume: "↓ CV",
+    },
+    about: {
+      sectionLabel: "01 /",
+      sectionTitle: "À propos de moi",
+      openToWork: "✓ Disponible",
+      whatIBring: "// Ce que j'apporte",
+      bullets: [
+        "Raisonnement statistique approfondi et conception expérimentale",
+        "Pipelines ML de bout en bout, de l'ingestion au déploiement",
+        "Communication claire des insights aux parties prenantes non techniques",
+        "Code de qualité production avec reproductibilité",
+      ],
+    },
+    projects: {
+      sectionLabel: "02 /",
+      sectionTitle: "Projets",
+      loadedFrom: "// Chargé en direct depuis",
+      taggedWith: "— dépôts tagués",
+      tagKeyword: "DATASCIENCE",
+      inDescription: "dans la description",
+      viewAll: "Voir tous les dépôts sur GitHub →",
+      emptyConfig: "Définissez NEXT_PUBLIC_GITHUB_USERNAME dans votre environnement ou modifiez src/lib/config.ts",
+      emptyNone: (username: string) => `Aucun dépôt avec "DATASCIENCE" dans la description trouvé pour @${username}`,
+      emptyHint: 'Ajoutez "DATASCIENCE" dans la description d\'un dépôt pour le mettre en avant ici.',
+      github: "GitHub",
+      liveDemo: "Démo live",
+    },
+    skills: {
+      sectionLabel: "03 /",
+      sectionTitle: "Compétences",
+      atAGlance: "// Stack technique en bref",
+      table: [
+        ["Langage principal", "Python 🐍"],
+        ["Notebooks", "Jupyter / Colab"],
+        ["Contrôle de version", "Git / GitHub"],
+        ["Déploiement", "Streamlit / Docker"],
+        ["Orchestration", "Airflow / Prefect"],
+        ["Serving de modèles", "FastAPI / BentoML"],
+        ["Suivi d'expériences", "MLflow / W&B"],
+        ["Visualisation", "Plotly / Altair"],
+      ],
+    },
+    contact: {
+      sectionLabel: "04 /",
+      sectionTitle: "Contact",
+      heading1: "Construisons",
+      heading2: "quelque chose avec la donnée.",
+      subtext:
+        "Que vous ayez un projet en tête, un défi data à relever, ou simplement envie de discuter de machine learning — ma boîte mail est ouverte.",
+      bullets: [
+        { icon: "💼", text: "Disponible en CDI, freelance ou mission" },
+        { icon: "🤝", text: "Heureux de collaborer sur des projets open-source" },
+        { icon: "🎤", text: "Disponible pour des conférences et du mentorat" },
+      ],
+      sendMessage: "// Envoyer un message",
+      sendEmail: "✉ Envoyer un e-mail",
+      orFindMe: "ou me retrouver sur",
+      copied: "Copié !",
+    },
+    footer: {
+      builtWith: "Construit avec Next.js · Tailwind · DaisyUI",
+      rights: "Tous droits réservés.",
+    },
+    statsLabels: ["Jeux de données analysés", "Modèles déployés", "Années d'expérience"],
+  },
+} as const
+
+export type Translations = typeof translations["en"]
