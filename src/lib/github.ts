@@ -76,7 +76,7 @@ export async function fetchDataScienceProjects(username: string): Promise<Projec
     while (true) {
       const res = await fetch(
         `https://api.github.com/users/${username}/repos?per_page=100&page=${page}&sort=updated`,
-        { headers, next: { revalidate: 3600 } }
+        { next: { revalidate: 3600 } }
       )
       if (!res.ok) break
       const batch: GitHubRepo[] = await res.json()
@@ -85,6 +85,7 @@ export async function fetchDataScienceProjects(username: string): Promise<Projec
       if (batch.length < 100) break
       page++
     }
+
 
     const filtered = all.filter((repo) =>
       repo.description?.toUpperCase().includes(DATASCIENCE_KEYWORD)
